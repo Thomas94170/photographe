@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "KronaOne";
+  src: url("../styles/assets/fonts/KronaOne-Regular.ttf") format(ttf);
+}
+body,
+header,
+footer {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+.tarif {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
