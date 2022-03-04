@@ -1,8 +1,11 @@
+import Head from "../components/Head";
 import Layout from "../components/Layout";
 
 export default function Tarif(){
 
     return(
+        <>
+        <Head/>
         <Layout page='Tarif'>
             <div className='tarif'>
             <h1 className="text-3xl">Mes Tarifs et Prestations</h1>
@@ -48,5 +51,6 @@ export default function Tarif(){
             
 
         </Layout>
+        </>
     )
 }

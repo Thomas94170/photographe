@@ -11,7 +11,7 @@ export default function Layout({children, page}){
             <title>{page}</title>
         </Head>
         <header className='container-lg'>
-            {/* <h1 className='text-5xl mb-2'>CRYPTO À SUIVRE</h1> */}
+            
             <div className='flex justify-evenly'>
                <Link href='/'>
                 <button className='bg-sky-800 p-3 m-2 rounded-full hover:shadow-md border-2 border-grey-300'>
