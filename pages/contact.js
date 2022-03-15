@@ -9,7 +9,7 @@ export default function Contact(){
         <Head/>
         <Layout page='Contact'>
             <h2 className="text-2xl ">Contactez nous</h2>
-            <br />
+            <br /><br />
             <ContactForm/>
            
         </Layout>

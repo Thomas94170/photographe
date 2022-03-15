@@ -1,11 +1,12 @@
 import Layout from "../components/Layout";
 import Image from 'next/image'
 import Head from "../components/Head";
+import axios from "axios";
 
 
 
-export default function Galerie({res}){
-    console.log(res)
+export default function Galerie({data}){
+    console.log(data)
     
     
     const myLoader = ({ src, width, quality }) => {
@@ -18,37 +19,27 @@ export default function Galerie({res}){
           <>
           <Head/>
             <Layout page='Galerie'>
-
-                
-                <div>
-                    <h1></h1>
+              {/* <div>{JSON.stringify(data)}</div> */}
+            <br /><br />
+            <ul className="grid grid-cols-4 gap-4">
+            {data.map(photo =>(
+            <li key ={photo.id} className='relative hover:shadow-md p-8
+                border border-blue-300 rounded-3xl md:w-auto flex-1 mx-5 cursor-pointer'> 
+              <div>
+                  <Image src={photo.img[0].formats.medium.url} alt={photo.name}
+                    loader={myLoader}
+                    width={700}
+                    height={700}
+                    className="hover:scale-125 transition duration-700 ease-in-out rounded-3xl"/>
+              </div>
+              <p>{photo.name}</p>
+              <br />
+            </li>
+            ))}
+            </ul>
+              
+                <div>   
                     <br /><br />
-
-
-                    <ul className="grid grid-cols-4 gap-4">
-         {res.map((photos,id) =>(
-           <li key={id} className='relative hover:shadow-md p-8
-           border border-blue-300 rounded-3xl bg-blue-100 md:w-auto flex-1 mx-5 cursor-pointer'>
-
-             <div >
-             <a className='rounded-md'>
-               <div className="text-center">
-                 <Image src={`http://localhost:1337`+photos.img[0].formats.large.url} alt={photos.name}
-                 loader={myLoader}
-                 width={700}
-                 height={700}
-                 className="hover:scale-125 transition duration-700 ease-in-out rounded-3xl"/>
-               </div>
-               <p className='text-sm mb-6 uppercase tracking-wider'>
-                 {photos.name}
-               </p>
-               
-              </a>
-             </div>
-           </li>
-         ))}
-       </ul>
-
                     <div className='form-check'>
                         <ul className='h-56 grid grid-cols-6 gap-4 content-center liste'>
                              <li>
@@ -100,23 +91,12 @@ export default function Galerie({res}){
 
     
 
-export async function getStaticProps(res){
-    try{
-      const res = await fetch(
-       "http://localhost:1337/photos"
-      ).then((res) => res.json());
-      console.log("le serveur a retourné les donnees")
-      
-      
-        
-  
+    export const getStaticProps = async(context) =>{
+      const url = "https://bdd-charlescantin.herokuapp.com"
+      const {data} = await axios.get(`${url}/photos`);
+      const photos = data.data
+    
       return{
-        props: {res}
-      };
-      
-    }catch (err){
-      console.error(err);
-      
+        props:{data}
+      }
     }
-      
-}

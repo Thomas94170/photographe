@@ -8,7 +8,7 @@ export default function ContactForm(){
     method="POST">
   
 
-  <label>
+    <label>
       <input type="forname" name="forname" placeholder="votre prénom" className="bg-inherit text-center font-sans"/>
     </label>
 
@@ -19,9 +19,8 @@ export default function ContactForm(){
     <label>
       <input type="email" name="_replyto" placeholder="votre email" className="bg-inherit text-center font-sans"/>
     </label>
+
     <label>
-      
-   
       <textarea name="message" placeholder="votre message" className="bg-inherit text-center font-sans"></textarea>
     </label>
     <div className="flex justify-center">
