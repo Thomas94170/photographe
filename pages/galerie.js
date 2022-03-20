@@ -44,37 +44,37 @@ export default function Galerie({data}){
                         <ul className='h-56 grid grid-cols-6 gap-4 content-center liste'>
                              <li>
                              <input className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" value="Mariage" id="Mariage"/>
-                             <label className="form-check-label inline-block text-gray-800" for="Mariage">
+                             <label className="form-check-label inline-block text-gray-800" htmlFor="Mariage">
                              Mariage
                              </label>
                              </li>
                              <li>
                              <input className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-500 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" value="Grossesse" id="Grossesse checked"/>
-                             <label className="form-check-label inline-block text-gray-800" for="Grossesse">
+                             <label className="form-check-label inline-block text-gray-800" htmlFor="Grossesse">
                              </label>
                              Grossesse
                              </li>
                              <li>
                              <input className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-400 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" value="Baptême" id="Baptême checked"/>
-                             <label className="form-check-label inline-block text-gray-800" for="Baptême">
+                             <label className="form-check-label inline-block text-gray-800" htmlFor="Baptême">
                              Baptême
                              </label>
                              </li>
                              <li>
                              <input className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-300 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" value="Couple" id="Couple checked"/>
-                             <label className="form-check-label inline-block text-gray-800" for="Couple">
+                             <label className="form-check-label inline-block text-gray-800" htmlFor="Couple">
                              Couple
                              </label>
                              </li>
                              <li>
                              <input className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-200 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" value="Famille" id="Famille checked"/>
-                             <label className="form-check-label inline-block text-gray-800" for="Famille">
+                             <label className="form-check-label inline-block text-gray-800" htmlFor="Famille">
                              Famille
                              </label>
                              </li>  
                              <li>
                              <input className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-100 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="Bébé" id="Bébé checked"/>
-                             <label className="form-check-label inline-blok text-gray-800" for="Bébé">
+                             <label className="form-check-label inline-blok text-gray-800" htmlFor="Bébé">
                              Bébé
                              </label>
                              </li>            
