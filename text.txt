@@ -52,3 +52,9 @@ http://localhost:1337/api/photos?populate=*
             {/* <ProjectList/> */}
 
             {res}
+
+
+
+[2022-03-15T19:02:04.085Z] error Error: Error uploading to cloudinary: 
+Invalid Signature e8f663dd3fb339406421c86506881985c7307bf4. 
+String to sign - 'public_id=perso2_b01f399031&timestamp=1647370923'.
