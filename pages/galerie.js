@@ -26,7 +26,7 @@ export default function Galerie({data}){
             <li key ={photo.id} className='relative hover:shadow-md p-8
                 border border-blue-300 rounded-3xl md:w-auto flex-1 mx-5 cursor-pointer'> 
               <div>
-                  <Image src={photo.img[0].formats.medium.url} alt={photo.name}
+                  <Image src={`localhost:1337`+photo.img[0].formats.medium.url} alt={photo.name}
                     loader={myLoader}
                     width={700}
                     height={700}
@@ -92,7 +92,7 @@ export default function Galerie({data}){
     
 
     export const getStaticProps = async(context) =>{
-      const url = "https://bdd-charlescantin.herokuapp.com"
+      const url = "http://localhost:1337"
       const {data} = await axios.get(`${url}/photos`);
       const photos = data.data
     
@@ -100,3 +100,5 @@ export default function Galerie({data}){
         props:{data}
       }
     }
+
+    
