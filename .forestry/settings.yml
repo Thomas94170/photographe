@@ -7,32 +7,24 @@ sections:
 - type: document
   path: Portrait
   label: Portrait
-  match: "**/*"
 - type: document
   path: Mariage
   label: Mariage
-  match: "**/*"
 - type: document
   path: Grossesse
   label: Grossesse
-  match: "**/*"
 - type: document
   path: Famille
   label: Famille
-  match: "**/*"
 - type: document
   path: Couple
   label: Couple
-  match: "**/*"
 - type: document
   path: Bebe
   label: Bebe
-  match: "**/*"
 - type: document
   path: Bapteme
   label: Bapteme
-  match: "**/*"
-  read_only: false
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
