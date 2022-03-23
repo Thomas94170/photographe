@@ -1,0 +1,46 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: document
+  path: Portrait
+  label: Portrait
+  match: "**/*"
+- type: document
+  path: Mariage
+  label: Mariage
+  match: "**/*"
+- type: document
+  path: Grossesse
+  label: Grossesse
+  match: "**/*"
+- type: document
+  path: Famille
+  label: Famille
+  match: "**/*"
+- type: document
+  path: Couple
+  label: Couple
+  match: "**/*"
+- type: document
+  path: Bebe
+  label: Bebe
+  match: "**/*"
+- type: document
+  path: Bapteme
+  label: Bapteme
+  match: "**/*"
+  read_only: false
+upload_dir: uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run develop
